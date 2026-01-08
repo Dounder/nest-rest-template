@@ -1,0 +1,44 @@
+{
+  // Biome configuration
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+
+  // Disable built-in formatters for languages that Biome handles
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Disable conflicting settings
+  "prettier.enable": false,
+  "eslint.enable": false,
+
+  // Optional: Hide ESLint/Prettier config files if you don't need them
+  "files.exclude": {
+    "**/.eslintrc.*": true,
+    "**/.prettierrc.*": true,
+    "**/prettier.config.*": true,
+    "**/.eslintignore": true,
+    "**/.prettierignore": true
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/generated": true,
+    "**/migrations": true,
+    "**/.github": true
+  }
+}
